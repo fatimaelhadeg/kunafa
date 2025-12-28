@@ -1,9 +1,8 @@
 import { createContext, useState, useEffect } from "react";
-import {toast} from 'react-toastify';
+import { toast } from "react-toastify";
 import { FoodData } from "../assets/img/assets.js";
 
 export const ShopContext = createContext();
-
 
 const ShopContextProvider = ({ children }) => {
   const [Foods, setFoods] = useState(FoodData);
@@ -11,85 +10,93 @@ const ShopContextProvider = ({ children }) => {
   const [Quantity, setQuantity] = useState(0);
   const [Total, setTotal] = useState(0);
 
+  // Total price
   useEffect(() => {
-    const Total = Cart.reduce((accumulator, currentItem) => {
-      const priceAsNumber = paraseFloat(currentItem.price);
-      if (isNaN(priceAsNumber)) {
-        return accumulator;
-      }
-      return accumulator + priceAsNumber * currentItem.amount;
+    const total = Cart.reduce((acc, item) => {
+      const price = parseFloat(item.price);
+      if (isNaN(price)) return acc;
+      return acc + price * item.amount;
     }, 0);
-    setTotal(Total);
+    setTotal(total);
   }, [Cart]);
 
+  // Total quantity
   useEffect(() => {
-    if (Cart) {
-      const amout = Cart.reduce((accumulator, currentItem) => {
-        return accumulator + currentItem.amount;
-      }, 0);
-    }
-    setQuantity;
+    const amount = Cart.reduce((acc, item) => {
+      return acc + item.amount;
+    }, 0);
+    setQuantity(amount);
   }, [Cart]);
 
   const addCart = (Food, id) => {
-    const newsItem = { ...Food, amout: 1 };
-
-    const cartItem = Cart.find((item) => {
-      return item.id === id;
-    });
+    const cartItem = Cart.find((item) => item.id === id);
 
     if (cartItem) {
-      const newCart = [...Cart].map((item) => {
-        if (item.id === id) {
-          return { ...item, amount: cartItem.amount };
-        } else {
-          return item;
-        }
-      });
-      setCart([...Cart,newItem])
-      toast.success("Food Added To Cart")
+      const newCart = Cart.map((item) =>
+        item.id === id
+          ? { ...item, amount: item.amount + 1 }
+          : item
+      );
+      setCart(newCart);
+    } else {
+      const newItem = { ...Food, amount: 1 };
+      setCart([...Cart, newItem]);
     }
+
+    toast.success("Food Added To Cart");
   };
 
   const clearCart = () => {
-    setCart([])
-    toast.success("Cart Empty")
-  }
+    setCart([]);
+    toast.success("Cart Empty");
+  };
 
-  const removeFromCart = () => {
-    const newCart = Cart.filter((item)=>{
-      return item.id !==id;
-    })
+  const removeFromCart = (id) => {
+    const newCart = Cart.filter((item) => item.id !== id);
     setCart(newCart);
-    toast.success("Food Removed Successfulyy")
-  }
-  const increasequantity = (id) = {
-    const cartItem = Cart.find((item)=> item.id === id);
-    addCart(cartItem,id)
-  }
-  const decreasequantity = (id) => {
-    const cartItem = Cart.find((item)=>{
-      return item.id === id;
-    })
+    toast.success("Food Removed Successfully");
+  };
 
-    if(cartItem){
-      const newCart = Cart.map((item)=>{
-        if(item.id === id){
-          return {...item,amount:cartItem.amount - 1}
-        }else{
-          return item
-        }
-      })
-      setCart(newCart)
-    }else{
-      if(cartItem.amount < 2){
-        removeFromCart(id)
+  const increasequantity = (id) => {
+    const cartItem = Cart.find((item) => item.id === id);
+    if (cartItem) {
+      addCart(cartItem, id);
+    }
+  };
+
+  const decreasequantity = (id) => {
+    const cartItem = Cart.find((item) => item.id === id);
+
+    if (cartItem) {
+      if (cartItem.amount > 1) {
+        const newCart = Cart.map((item) =>
+          item.id === id
+            ? { ...item, amount: item.amount - 1 }
+            : item
+        );
+        setCart(newCart);
+      } else {
+        removeFromCart(id);
       }
     }
-  }
+  };
 
   return (
-    <ShopContext.Provider value={{ Foods,Cart,addCart,removeFromCart,clearCart,increasequantity,decreasequantity,Total  }}>{children}</ShopContext.Provider>
+    <ShopContext.Provider
+      value={{
+        Foods,
+        Cart,
+        addCart,
+        removeFromCart,
+        clearCart,
+        increasequantity,
+        decreasequantity,
+        Total,
+        Quantity,
+      }}
+    >
+      {children}
+    </ShopContext.Provider>
   );
 };
 
