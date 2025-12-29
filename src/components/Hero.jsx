@@ -16,7 +16,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gray-900 flex items-center justify-center w-full overflow-hidden">
+    <div className="relative min-h-screen bg-gray-900 flex items-center justify-center w-full overflow-hidden"
+    id="hero">
       {/* Images slider */}
       {images.map((img, index) => (
         <img

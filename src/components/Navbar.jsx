@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex items-center space-x-6 font-medium">
-        <a href="#Home" className="hover:text-orange-400 transition">Home</a>
+        <a href="#hero" className="hover:text-orange-400 transition">Home</a>
         <a href="#foodlist" className="hover:text-orange-400 transition">Menu</a>
         <a href="#Offers" className="hover:text-orange-400 transition">Offers</a>
         <a href="#Timing" className="hover:text-orange-400 transition">Timing</a>
@@ -56,7 +56,6 @@ const Navbar = () => {
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs h-5 w-5 flex items-center justify-center rounded-full">{Quantity}</span>
             )}
           </Link>
-          <BiUser className="text-3xl cursor-pointer" />
         </div>
 
         <button className="bg-orange-500 hover:bg-orange-600 transition text-white py-2 px-4 rounded-full text-sm font-medium">
