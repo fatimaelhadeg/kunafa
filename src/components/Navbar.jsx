@@ -4,7 +4,7 @@ import { MdOutlineRestaurant } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
-import Theme from "..gi/pages/Theme";
+import Theme from "../pages/Theme";
 import { ShopContext } from "./ShopContext";
 
 const Navbar = () => {
