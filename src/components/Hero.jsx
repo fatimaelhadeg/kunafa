@@ -18,7 +18,6 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen bg-gray-900 flex items-center justify-center w-full overflow-hidden"
     id="hero">
-      {/* Images slider */}
       {images.map((img, index) => (
         <img
           key={index}
@@ -30,7 +29,6 @@ const Hero = () => {
         />
       ))}
 
-      {/* Texte et input overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
           DELICIOUS BAKLAVA
@@ -40,7 +38,6 @@ const Hero = () => {
           irresistible dessert loved by all.
         </p>
 
-        {/* Input + Button stylé */}
         <div className="mt-8 flex w-full max-w-md">
           <input
             type="text"

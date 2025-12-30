@@ -41,7 +41,7 @@ const Navbar = () => {
       <nav className="hidden md:flex items-center space-x-6 font-medium">
         <a href="#hero" className="hover:text-orange-400 transition">Home</a>
         <a href="#foodlist" className="hover:text-orange-400 transition">Menu</a>
-        <a href="#Offers" className="hover:text-orange-400 transition">Offers</a>
+        <a href="#Reviews" className="hover:text-orange-400 transition">Reviews</a>
         <a href="#Timing" className="hover:text-orange-400 transition">Timing</a>
         <a href="#Service" className="hover:text-orange-400 transition">Service</a>
       </nav>
@@ -89,7 +89,7 @@ const Navbar = () => {
       <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>
     </li>
     <li>
-      <a onClick={() => setShowMobile(false)} href="#Offers" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Offers</a>
+      <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Reviews</a>
     </li>
     <li>
       <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Timing</a>
