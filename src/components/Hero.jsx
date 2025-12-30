@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import baklava1 from "../assets/img/baklava1.jpg";
 import baklava2 from "../assets/img/baklava2.jpg";
 import baklava3 from "../assets/img/baklava3.jpg";
+import { Link } from "react-router-dom";
+import { GiFoodTruck } from "react-icons/gi";
+
+
+
+
 
 const images = [baklava1, baklava2, baklava3];
 
@@ -37,17 +43,19 @@ const Hero = () => {
           Golden, crunchy layers of pastry, nuts, and syrup combine to create a truly
           irresistible dessert loved by all.
         </p>
+ <Link
+  to="/register" 
+  className="bg-white border-2 border-gray-400 text-gray-800 px-6 py-3 rounded-full 
+             shadow-lg hover:shadow-2xl hover:bg-gray-400 hover:text-white 
+             transition-all duration-300 flex items-center gap-2"
+>
+  <GiFoodTruck size={20} /> 
+  Order Now
+</Link>
 
-        <div className="mt-8 flex w-full max-w-md">
-          <input
-            type="text"
-            placeholder="Enter your desire"
-            className="flex-1 px-6 py-3 rounded-l-full text-lg border-2 border-yellow-100 shadow-xl focus:outline-none focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
-          />
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-r-full border-2 border-yellow-400 shadow-xl transition-colors">
-            Find
-          </button>
-        </div>
+
+
+
       </div>
     </div>
   );

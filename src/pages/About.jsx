@@ -7,7 +7,7 @@ import k12 from '../assets/img/order.png'
 const About = () => {
   return (
     <>
-      <section id="about" className="py-16 px-4 md:px-8 bg-gradient-to-r from-orange-200 to-orange-300">
+      <section id="about" className="py-34 px-4 md:px-8 bg-gradient-to-r from-gray-100 to-gray-300 ">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
           
           {/* Image stylée à gauche avec animation */}
@@ -20,9 +20,11 @@ const About = () => {
             <img 
               src={k12} 
               alt="kunafaabout" 
-              className="max-w-xs h-auto shadow-2xl hover:scale-105 transition-transform duration-500"
+              className="max-w-xs h-auto shadow-2xl hover:scale-105 transition-transform duration-500
+                     shadow-gray-400 dark:shadow-gray-700 
+             hover:shadow-2xl hover:shadow-gray-500 dark:hover:shadow-gray-800"
               style={{
-                borderRadius: "50% 20% 50% 20% / 30% 40% 60% 50%", // forme organique
+                borderRadius: "50% 20% 50% 20% / 30% 40% 60% 50%",
                 objectFit: "cover",
               }}
             />
@@ -45,12 +47,13 @@ const About = () => {
               Our goal is simple: delight your taste buds and bring a touch of <span className="text-yellow-600 font-medium">Turkish sweetness</span> to every moment.
             </p>
 
-            <Link 
-              to="/hero" 
-              className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-400 transition-colors duration-300"
-            >
-              Back to Home
-            </Link>
+          <Link
+  to="/"
+  className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-400 transition-colors duration-300"
+>
+  Back to Home
+</Link>
+
           </motion.div>
 
         </div>

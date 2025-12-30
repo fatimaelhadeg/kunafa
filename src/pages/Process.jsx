@@ -12,8 +12,9 @@ const GetApp = () => {
             className=" dark:bg-black py-10 transition-colors duration-300"
             id='Service'
         >
-            <div className=" bg-orange-100 dark:bg-[#1F1D2B] py-16 px-6 lg:px-20 rounded-3xl mx-4 lg:mx-16">
-                <div className="grid md:grid-cols-2 items-center gap-10">
+<div className="bg-white dark:bg-[#1F1D2B] py-16 px-6 lg:px-20 rounded-3xl mx-4 lg:mx-16 
+            shadow-lg shadow-gray-400 dark:shadow-gray-700 
+            transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-500 dark:hover:shadow-gray-800">                 <div className="grid md:grid-cols-2 items-center gap-10">
                     {/* Left Text */}
                     <div>
                         <h4 className="text-orange-500 font-semibold uppercase mb-2">

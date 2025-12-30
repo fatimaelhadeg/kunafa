@@ -20,10 +20,10 @@ const Timing = () => {
   const currentDay = fullWeekTimings[(today + 6) % 7];
 
   return (
-    <div
-      className="min-h-screen bg-[#FFF5E1] dark:bg-[#2B1F1C] py-16 px-6 transition-colors duration-500"
-      id="Timing"
-    >
+  <div className="bg-white dark:bg-[#1F1D2B] py-16 px-6 lg:px-20 rounded-3xl mx-4 lg:mx-16 
+            shadow-lg shadow-gray-400 dark:shadow-gray-700 
+            transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-500 dark:hover:shadow-gray-800"
+            id="Timing">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
