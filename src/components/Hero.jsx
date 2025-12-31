@@ -44,13 +44,11 @@ const Hero = () => {
           irresistible dessert loved by all.
         </p>
  <Link
-  to="/register" 
+  to="/Login" 
   className="bg-white border-2 border-gray-400 text-gray-800 px-6 py-3 rounded-full 
              shadow-lg hover:shadow-2xl hover:bg-gray-400 hover:text-white 
              transition-all duration-300 flex items-center gap-2"
->
-  <GiFoodTruck size={20} /> 
-  Order Now
+>  Order Now
 </Link>
 
 

@@ -43,13 +43,13 @@ const Timing = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex justify-between items-center p-4 bg-[#F5E1C9] dark:bg-[#4B2E2B] rounded-2xl shadow-lg border-l-4 border-[#D4A373] dark:border-[#FFDAB9]
+              className="flex justify-between items-center p-4 bg-[#ffffff] dark:bg-[#4B2E2B] rounded-2xl shadow-lg border-l-4 border-[#D4A373] dark:border-[#FFDAB9]
                          hover:bg-[#F3C693] dark:hover:bg-[#5C2E2B] transition-colors duration-300 cursor-pointer"
             >
-              <span className="font-semibold text-[#8B4513] dark:text-[#FFE4C4] text-lg">
+              <span className="font-semibold text-[#a28060] dark:text-[#FFE4C4] text-lg">
                 {item.day}
               </span>
-              <span className="text-[#5C4033] dark:text-[#FFDAB9] font-medium">
+              <span className="text-[#a28060] dark:text-[#FFDAB9] font-medium">
                 {item.time}
               </span>
             </motion.div>
@@ -84,14 +84,14 @@ const Timing = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-4 bg-[#F5E1C9] dark:bg-[#4B2E2B] rounded-2xl shadow-lg border-l-4 border-[#D4A373] dark:border-[#FFDAB9]
+              className="p-4 bg-[#ffffff] dark:bg-[#4B2E2B] rounded-2xl shadow-lg border-l-4 border-[#D4A373] dark:border-[#FFDAB9]
                          hover:bg-[#F3C693] dark:hover:bg-[#5C2E2B] transition-colors duration-300"
             >
-              <span className="font-semibold text-[#8B4513] dark:text-[#FFE4C4] text-lg">
-                {item.title}
+              <span className="font-semibold text-[#a28060] dark:text-[#FFE4C4] text-lg">
+                {item.title}  : 
               </span>
-              <span className="text-[#5C4033] dark:text-[#FFDAB9] font-medium">
-                {item.time}
+              <span className="text-[#a28060] dark:text-[#FFDAB9] font-medium">
+                  {item.time}
               </span>
             </motion.div>
           ))}
