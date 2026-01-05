@@ -18,7 +18,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <div>
+    <div >
       <ToastContainer />
       <Totop />
       <Navbar />

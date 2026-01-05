@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const FoodsList = () => {
   const { Foods, addCart } = useContext(ShopContext);
+      //menu+register+panier...
+//https://dribbble.com/shots/26080982-Food-Website-Design
 
   return (
     <div className="w-full mx-auto px-6 text-center mt-20" id="foodlist">

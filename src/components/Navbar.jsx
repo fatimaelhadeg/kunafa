@@ -83,7 +83,7 @@ const Navbar = () => {
   </div>
   <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
     <li>
-      <a onClick={() => setShowMobile(false)} href="#Home" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Home</a>
+      <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Home</a>
     </li>
     <li>
       <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>

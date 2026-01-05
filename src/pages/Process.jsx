@@ -21,7 +21,7 @@ const GetApp = () => {
                             Our Application
                         </h4>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Simple Way To Order Your Food
+                            Simple Way To Order Your BaklaVa
                         </h2>
                         <p className="text-gray-700 dark:text-gray-300 mb-6">
                             Discover food wherever and whenever and get your food delivered
