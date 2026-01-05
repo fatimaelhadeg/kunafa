@@ -9,7 +9,7 @@ const FoodsList = () => {
 
   return (
     <div className="w-full mx-auto px-6 text-center mt-20" id="foodlist">
-      <h2 className="text-3xl font-semibold mb-8 text-gray-800">Our Delicious BaKlaVa</h2>
+      <h2 className="text-3xl font-semibold mb-8 text-gray-800">Our Delicious Baklawa</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {Foods.map((Food) => {
           const { id, image, name, price, description } = Food;

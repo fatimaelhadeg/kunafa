@@ -14,7 +14,7 @@ export const categoryItem = [
         category_title:"All"
     },
     {
-        category_title: "Baklava",
+        category_title: "Baklawa",
     },
     {
         category_title: "Kunafa",

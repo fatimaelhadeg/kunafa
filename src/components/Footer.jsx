@@ -14,10 +14,10 @@ const Footer = () => {
         {/* Logo & Description */}
         <div className="space-y-4">
           <h2 className="text-2xl font-extrabold text-orange-500 mb-2 tracking-wide">
-            BaklaVa's Kitchen
+            BaklaWa's Kitchen
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Your BaklaVa's Kitchen app for delicious and fast food delivery. Taste the joy at your doorstep.
+            Your BaklaWa's Kitchen app for delicious and fast food delivery. Taste the joy at your doorstep.
           </p>
           <div className="flex gap-4 mt-4 text-orange-500">
             {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn].map((Icon, idx) => (
@@ -87,10 +87,10 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 tracking-wide">Contact</h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
-              Email: support@BaklaVaK.com
+              Email: support@BaklawaK.com
             </li>
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
-              Phone: +212 00-00-00-00
+              Phone: +212 06-23-78-99
             </li>
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
               Location: Agadir, Maroc
@@ -101,7 +101,7 @@ const Footer = () => {
 
       {/* Bottom line */}
       <div className="text-center text-sm text-gray-500 border-t mt-8 pt-4">
-        © Copyright developed by Champion Programmers | All rights reserved
+        © Copyright developed by Ocean Connecting | All rights reserved
       </div>
     </footer>
   );

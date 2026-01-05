@@ -34,7 +34,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-1.5 text-2xl font-bold text-orange-500">
         <MdOutlineRestaurant />
-        <span>BaklaVa's Kitchen</span>
+        <span>BaklaWa's Kitchen</span>
       </div>
 
       {/* Desktop Nav */}

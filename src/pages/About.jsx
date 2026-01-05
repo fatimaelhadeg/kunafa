@@ -27,7 +27,7 @@ const About = () => {
           Why Choose Us
         </h1>
  <p className="text-gray-800 text-center leading-relaxed max-w-md mx-auto">
-  Our baklava is loved by dessert enthusiasts everywhere,<br />
+  Our Baklawa is loved by dessert enthusiasts everywhere,<br />
   made with the finest ingredients and crafted to perfection,<br />
   delivering a taste that is simply unforgettable.
 </p>

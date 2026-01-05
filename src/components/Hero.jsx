@@ -37,7 +37,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
         <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-          DELICIOUS BAKLAVA
+          DELICIOUS BAKLAWA
         </h1>
         <p className="mt-4 text-lg md:text-xl text-white max-w-2xl drop-shadow-md">
           Golden, crunchy layers of pastry, nuts, and syrup combine to create a truly
