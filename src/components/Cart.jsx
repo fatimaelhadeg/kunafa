@@ -28,8 +28,8 @@ const Cart = () => {
   const generateWhatsAppLink = () => {
     if (Cart.length === 0) return "#";
 
-  let message = `🛍️ *Nouvelle Commande*\n\n`;
-message += `*Détails du client:*\n`;
+  let message = `🛍️ *Ma Commande*\n\n`;
+message += `*Mes Details:*\n`;
 message += `👤 Nom: ${formData.fullName}\n`;
 message += `🏙 Ville: ${formData.city}\n`;
 message += `📞 Téléphone: ${formData.phone}\n\n`;
@@ -40,7 +40,7 @@ Cart.forEach((item, index) => {
 });
 
 message += `\n*Total:* ${Total}dh\n`;
-message += `\nMerci pour votre commande ! 🙏`;
+message += `\nMerci de confirmer ma commande. ! 🙏`;
 
 
 
