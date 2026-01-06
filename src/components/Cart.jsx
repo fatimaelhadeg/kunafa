@@ -4,7 +4,7 @@ import { FiTrash2 } from "react-icons/fi";
 import { IoMdRemove, IoMdAdd } from "react-icons/io";
 
 const Cart = () => {
-  //reviews..theme darkmode/
+  //reviews..theme darkmode/domain
   const {
     Cart,
     removeFromCart,

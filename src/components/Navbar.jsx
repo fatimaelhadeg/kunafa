@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BiCart, BiUser } from "react-icons/bi";
+import { BiCart } from "react-icons/bi";
 import { MdOutlineRestaurant } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
@@ -12,14 +12,12 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { Quantity } = useContext(ShopContext);
 
-  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent background scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = showMobile ? "hidden" : "auto";
     return () => { document.body.style.overflow = "auto"; };
@@ -46,21 +44,23 @@ const Navbar = () => {
         <a href="#Service" className="hover:text-orange-400 transition">Service</a>
       </nav>
 
-      {/* Right icons */}
+      {/* Right icons (search, cart, theme) */}
       <div className="flex items-center space-x-4">
-        <Theme />
-        <div className="flex items-center space-x-6">
-          <Link to='/cart' className="relative">
-            <BiCart className="text-3xl cursor-pointer" />
-            {Quantity > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs h-5 w-5 flex items-center justify-center rounded-full">{Quantity}</span>
-            )}
-          </Link>
+        {/* Search circle */}
+        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition cursor-pointer">
+          🔍
         </div>
 
-        <Link to="/login" className="bg-orange-500 hover:bg-orange-600 transition text-white py-2 px-4 rounded-full text-sm font-medium">
-          Register Now
+        {/* Cart circle */}
+        <Link to="/cart" className="relative w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition">
+          <BiCart className="text-xl text-orange-600" />
+          {Quantity > 0 && (
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs h-4 w-4 flex items-center justify-center rounded-full">{Quantity}</span>
+          )}
         </Link>
+
+        {/* Theme circle */}
+          <Theme />
 
         {/* Mobile menu icon */}
         <HiMenu
@@ -70,39 +70,37 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-     {/* Mobile Menu */}
-<div
-  className={`fixed top-0 right-0 w-full h-full bg-white z-50 transform transition-transform duration-300
-    ${showMobile ? "translate-x-0" : "translate-x-full"} md:hidden flex flex-col`}
->
-  <div className="flex justify-end p-6">
-    <IoMdClose
-      onClick={() => setShowMobile(false)}
-      className="w-6 h-6 cursor-pointer text-black"
-    />
-  </div>
-  <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
-    <li>
-      <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Home</a>
-    </li>
-    <li>
-      <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>
-    </li>
-    <li>
-      <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Reviews</a>
-    </li>
-    <li>
-      <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Timing</a>
-    </li>
-    <li>
-      <a onClick={() => setShowMobile(false)} href="#Service" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Service</a>
-    </li>
-    <li>
-      <Theme />
-    </li>
-  </ul>
-</div>
-
+      <div
+        className={`fixed top-0 right-0 w-full h-full bg-white z-50 transform transition-transform duration-300
+          ${showMobile ? "translate-x-0" : "translate-x-full"} md:hidden flex flex-col`}
+      >
+        <div className="flex justify-end p-6">
+          <IoMdClose
+            onClick={() => setShowMobile(false)}
+            className="w-6 h-6 cursor-pointer text-black"
+          />
+        </div>
+        <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
+          <li>
+            <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Home</a>
+          </li>
+          <li>
+            <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>
+          </li>
+          <li>
+            <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Reviews</a>
+          </li>
+          <li>
+            <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Timing</a>
+          </li>
+          <li>
+            <a onClick={() => setShowMobile(false)} href="#Service" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Service</a>
+          </li>
+          <li>
+            <Theme />
+          </li>
+        </ul>
+      </div>
     </header>
   );
 };
