@@ -10,7 +10,7 @@ import SafetyCen from "./pages/SafetyCen";
 import Faqs from "./pages/Faqs";
 import Login from "./auth/Login";
 import Local from "./pages/Local";
-import HelpCen from "./pages/HelpCen";
+//import HelpCen from "./pages/HelpCen";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 
@@ -31,7 +31,6 @@ const App = () => {
         <Route path="/SafetyCen" element={<SafetyCen />} />
         <Route path="/Faqs" element={<Faqs />} />
         <Route path="/local" element={<Local />} />
-        <Route path="/helpCen" element={<HelpCen />} />
         <Route
           path="/login"
           element={

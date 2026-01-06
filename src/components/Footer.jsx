@@ -14,10 +14,11 @@ const Footer = () => {
         {/* Logo & Description */}
         <div className="space-y-4">
           <h2 className="text-2xl font-extrabold text-orange-500 mb-2 tracking-wide">
-            BaklaWa's Kitchen
+            La Cuisine de BaklaWa
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Your BaklaWa's Kitchen app for delicious and fast food delivery. Taste the joy at your doorstep.
+            Votre application La Cuisine de BaklaWa pour une livraison rapide et délicieuse. 
+            Savourez la joie directement à votre porte.
           </p>
           <div className="flex gap-4 mt-4 text-orange-500">
             {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn].map((Icon, idx) => (
@@ -29,16 +30,16 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Links */}
+        {/* Liens de l'entreprise */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 tracking-wide">Company</h3>
+          <h3 className="text-lg font-semibold mb-4 tracking-wide">Entreprise</h3>
           <ul className="space-y-3 text-gray-700 dark:text-gray-300">
             <li>
               <Link
                 to="/About"
                 className="flex items-center gap-2 hover:text-orange-400 transition transform hover:translate-x-1"
               >
-                About Us
+                À Propos
               </Link>
             </li>
             <li>
@@ -54,21 +55,20 @@ const Footer = () => {
                 to="/Timing"
                 className="flex items-center gap-2 hover:text-orange-400 transition transform hover:translate-x-1"
               >
-                Timing
+                Horaires
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Support Links */}
+        {/* Liens de support */}
         <div>
           <h3 className="text-lg font-semibold mb-4 tracking-wide">Support</h3>
           <ul className="space-y-3 text-gray-700 dark:text-gray-300">
             {[
-              { name: "Help Center", to: "/HelpCen" },
-              { name: "Safety Center", to: "/SafetyCen" },
-              { name: "FAQs", to: "/Faqs" },
-              { name: "Contact Support", to: "/Service" },
+              { name: "Centre de sécurité", to: "/SafetyCen" },
+              { name: "FAQ", to: "/Faqs" },
+              { name: "Contacter le support", to: "/Service" },
             ].map((link, idx) => (
               <li key={idx}>
                 <Link
@@ -82,26 +82,26 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Informations de contact */}
         <div>
           <h3 className="text-lg font-semibold mb-4 tracking-wide">Contact</h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
-              Email: support@BaklawaK.com
+              Email : support@BaklawaK.com
             </li>
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
-              Phone: +212 06-23-78-99
+              Téléphone : +212 06-23-78-99
             </li>
             <li className="hover:text-orange-400 transition transform hover:translate-x-1">
-              Location: Agadir, Maroc
+              Localisation : Agadir, Maroc
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Bottom line */}
+      {/* Bas de page */}
       <div className="text-center text-sm text-gray-500 border-t mt-8 pt-4">
-        © Copyright developed by Ocean Connecting | All rights reserved
+        © Développé par Ocean Connecting | Tous droits réservés
       </div>
     </footer>
   );

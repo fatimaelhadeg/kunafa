@@ -5,6 +5,8 @@ import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Theme from "../pages/Theme";
+import LangueSwitch from "./LangueSwitch";
+
 import { ShopContext } from "./ShopContext";
 
 const Navbar = () => {
@@ -35,23 +37,23 @@ const Navbar = () => {
         <span>BaklaWa's Kitchen</span>
       </div>
 
-      {/* Desktop Nav */}
+      {/* Menu Desktop */}
       <nav className="hidden md:flex items-center space-x-6 font-medium">
-        <a href="#hero" className="hover:text-orange-400 transition">Home</a>
+        <a href="#hero" className="hover:text-orange-400 transition">Accueil</a>
         <a href="#foodlist" className="hover:text-orange-400 transition">Menu</a>
-        <a href="#Reviews" className="hover:text-orange-400 transition">Reviews</a>
-        <a href="#Timing" className="hover:text-orange-400 transition">Timing</a>
-        <a href="#Service" className="hover:text-orange-400 transition">Service</a>
+        <a href="#Reviews" className="hover:text-orange-400 transition">Avis</a>
+        <a href="#Timing" className="hover:text-orange-400 transition">Horaires</a>
+        <a href="#Service" className="hover:text-orange-400 transition">Application</a>
       </nav>
 
-      {/* Right icons (search, cart, theme) */}
+      {/* Icônes droite (panier, thème, recherche) */}
       <div className="flex items-center space-x-4">
-        {/* Search circle */}
+        {/* Cercle recherche */}
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition cursor-pointer">
           🔍
         </div>
 
-        {/* Cart circle */}
+        {/* Cercle panier */}
         <Link to="/cart" className="relative w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition">
           <BiCart className="text-xl text-orange-600" />
           {Quantity > 0 && (
@@ -59,17 +61,19 @@ const Navbar = () => {
           )}
         </Link>
 
-        {/* Theme circle */}
-          <Theme />
+        {/* Thème */}
+        <Theme />
+        {/* LanguageSwitcher */}
+        <LangueSwitch />
 
-        {/* Mobile menu icon */}
+        {/* Icône menu mobile */}
         <HiMenu
           className="md:hidden w-7 h-7 cursor-pointer"
           onClick={() => setShowMobile(true)}
         />
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu Mobile */}
       <div
         className={`fixed top-0 right-0 w-full h-full bg-white z-50 transform transition-transform duration-300
           ${showMobile ? "translate-x-0" : "translate-x-full"} md:hidden flex flex-col`}
@@ -82,23 +86,27 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
           <li>
-            <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Home</a>
+            <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Accueil</a>
           </li>
           <li>
             <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Reviews</a>
+            <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Avis</a>
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Timing</a>
+            <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Horaires</a>
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#Service" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Service</a>
+            <a onClick={() => setShowMobile(false)} href="#Service" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Application</a>
           </li>
           <li>
             <Theme />
           </li>
+          <li>
+            <LangueSwitch />
+            </li>
+
         </ul>
       </div>
     </header>

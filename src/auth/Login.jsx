@@ -1,44 +1,7 @@
 import React, { useState } from "react";
-import { auth } from "../firebase";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const Login = () => {
   const [isLogin, setLogin] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!isLogin && password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-
-    try {
-      if (isLogin) {
-        // Login
-        await signInWithEmailAndPassword(auth, email, password);
-        alert("Tzadt login b success!");
-      } else {
-        // Sign Up
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        // Update display name
-        await updateProfile(userCredential.user, { displayName: name });
-        alert("Account created b success!");
-      }
-
-      // Clear form
-      setEmail("");
-      setPassword("");
-      setName("");
-      setConfirmPassword("");
-    } catch (error) {
-      alert(error.message);
-    }
-  };
 
   return (
     <div
@@ -83,13 +46,11 @@ const Login = () => {
       </div>
 
       {/* Form */}
-      <form className="space-y-4" onSubmit={handleSubmit}>
+      <form className="space-y-4">
         {!isLogin && (
           <input
             type="text"
             placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
             className="w-full p-3 rounded-md bg-white border border-gray-200
             outline-none focus:border-[#A97142] transition"
             required
@@ -99,8 +60,6 @@ const Login = () => {
         <input
           type="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           className="w-full p-3 rounded-md bg-white border border-gray-200
           outline-none focus:border-[#A97142] transition"
           required
@@ -109,8 +68,6 @@ const Login = () => {
         <input
           type="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
           className="w-full p-3 rounded-md bg-white border border-gray-200
           outline-none focus:border-[#A97142] transition"
           required
@@ -120,8 +77,6 @@ const Login = () => {
           <input
             type="password"
             placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
             className="w-full p-3 rounded-md bg-white border border-gray-200
             outline-none focus:border-[#A97142] transition"
             required
@@ -136,7 +91,6 @@ const Login = () => {
 
         {/* Main Button */}
         <button
-          type="submit"
           className="
             w-full p-3 rounded-full text-lg font-medium text-white
             bg-gradient-to-r from-[#8B5A2B] via-[#A97142] to-[#C89B6D]
