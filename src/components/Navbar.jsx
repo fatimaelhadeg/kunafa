@@ -3,16 +3,49 @@ import { BiCart } from "react-icons/bi";
 import { MdOutlineRestaurant } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Theme from "../pages/Theme";
 import LangueSwitch from "./LangueSwitch";
+import { useTranslation } from "react-i18next";
 
 import { ShopContext } from "./ShopContext";
+
+const NavbarLink = ({ id, label, closeMobile }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (closeMobile) closeMobile(); // close mobile menu if open
+
+    if (location.pathname === "/") {
+      // scroll f same page
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // navigate home + scroll
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  return (
+    <a
+      href={`#${id}`}
+      onClick={handleClick}
+      className="px-4 py-2 rounded-full hover:bg-orange-50 transition"
+    >
+      {label}
+    </a>
+  );
+};
 
 const Navbar = () => {
   const [showMobile, setShowMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { Quantity } = useContext(ShopContext);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 100);
@@ -22,7 +55,9 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = showMobile ? "hidden" : "auto";
-    return () => { document.body.style.overflow = "auto"; };
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [showMobile]);
 
   return (
@@ -34,46 +69,50 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-1.5 text-2xl font-bold text-orange-500">
         <MdOutlineRestaurant />
-        <span>BaklaWa's Kitchen</span>
+        <span>{t("navbar.brand")}</span>
       </div>
 
       {/* Menu Desktop */}
       <nav className="hidden md:flex items-center space-x-6 font-medium">
-        <a href="#hero" className="hover:text-orange-400 transition">Accueil</a>
-        <a href="#foodlist" className="hover:text-orange-400 transition">Menu</a>
-        <a href="#Reviews" className="hover:text-orange-400 transition">Avis</a>
-        <a href="#Timing" className="hover:text-orange-400 transition">Horaires</a>
-        <a href="#Service" className="hover:text-orange-400 transition">Application</a>
+        <NavbarLink id="hero" label={t("navbar.home")} />
+        <NavbarLink id="foodlist" label={t("navbar.menu")} />
+        <NavbarLink id="reviews" label={t("navbar.reviews")} />
+        <NavbarLink id="Service" label={t("navbar.app")} />
       </nav>
 
-      {/* Icônes droite (panier, thème, recherche) */}
+      {/* Icons Right */}
       <div className="flex items-center space-x-4">
-        {/* Cercle recherche */}
+        {/* Search icon */}
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition cursor-pointer">
           🔍
         </div>
 
-        {/* Cercle panier */}
-        <Link to="/cart" className="relative w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition">
+        {/* Cart */}
+        <Link
+          to="/cart"
+          className="relative w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition"
+        >
           <BiCart className="text-xl text-orange-600" />
           {Quantity > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs h-4 w-4 flex items-center justify-center rounded-full">{Quantity}</span>
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs h-4 w-4 flex items-center justify-center rounded-full">
+              {Quantity}
+            </span>
           )}
         </Link>
 
-        {/* Thème */}
+        {/* Theme */}
         <Theme />
-        {/* LanguageSwitcher */}
+        {/* Language Switch */}
         <LangueSwitch />
 
-        {/* Icône menu mobile */}
+        {/* Mobile Menu Icon */}
         <HiMenu
           className="md:hidden w-7 h-7 cursor-pointer"
           onClick={() => setShowMobile(true)}
         />
       </div>
 
-      {/* Menu Mobile */}
+      {/* Mobile Menu */}
       <div
         className={`fixed top-0 right-0 w-full h-full bg-white z-50 transform transition-transform duration-300
           ${showMobile ? "translate-x-0" : "translate-x-full"} md:hidden flex flex-col`}
@@ -86,27 +125,23 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col items-center gap-6 mt-10 text-lg font-medium">
           <li>
-            <a onClick={() => setShowMobile(false)} href="#hero" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Accueil</a>
+            <NavbarLink id="hero" label={t("navbar.home")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#foodlist" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Menu</a>
+            <NavbarLink id="foodlist" label={t("navbar.menu")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#Reviews" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Avis</a>
+            <NavbarLink id="reviews" label={t("navbar.reviews")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
-            <a onClick={() => setShowMobile(false)} href="#Timing" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Horaires</a>
-          </li>
-          <li>
-            <a onClick={() => setShowMobile(false)} href="#Service" className="px-4 py-2 rounded-full hover:bg-orange-50 transition">Application</a>
+            <NavbarLink id="Service" label={t("navbar.app")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
             <Theme />
           </li>
           <li>
             <LangueSwitch />
-            </li>
-
+          </li>
         </ul>
       </div>
     </header>

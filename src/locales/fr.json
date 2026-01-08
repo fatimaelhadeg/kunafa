@@ -1,13 +1,182 @@
 {
-  "appName": "Boutique de Baklava",
-  "welcome": "Bienvenue dans notre boutique !",
-  "orderNow": "Commander",
-  "cart": "Panier",
-  "checkout": "Passer à la caisse",
-  "thankYou": "Merci pour votre commande !",
-  "contact": "Contactez-nous",
-  "language": "Langue",
-  "home": "Accueil",
-  "about": "À propos",
-  "faq": "FAQ"
+  "navbar": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "reviews": "Avis",
+    "hours": "Horaires",
+    "app": "Application",
+    "search": "Rechercher",
+    "brand": "BaklaWa's Kitchen"
+  },
+
+   "hero": {
+    "title": "Baklawa délicieuse",
+    "description": "Des couches dorées et croustillantes de pâte, de noix et de sirop se combinent pour créer un dessert irrésistible, adoré de tous.",
+    "cta": "Commander maintenant"
+  },
+ "foods": {
+      "title": "Nos délicieuses Baklawa",
+      "price": "MAD",
+      "addToCart": "Ajouter au panier",
+      "searchPlaceholder": "Recherchez un type de baklawa"
+    },
+    "food": {
+      "baklawaClassic": {
+        "name": "Baklawa classique",
+        "description": "Baklawa traditionnelle farcie aux noix et au miel local."
+      },
+      "baklawaPistache": {
+        "name": "Baklawa pistache",
+        "description": "Feuilles fines, pistaches fraîches, goût riche et sucré."
+      },
+      "baklawaRolls": {
+        "name": "Baklawa en rouleaux",
+        "description": "Baklawa roulée, imbibée de miel."
+      },
+      "baklawaMix": {
+        "name": "Baklawa mixte",
+        "description": "Assortiment de baklawa aux noix et aux pistaches."
+      },
+      "baklawaRoyale": {
+        "name": "Baklawa royale",
+        "description": "Baklawa de luxe avec miel local et noix sélectionnées."
+      },
+      "baklawaOrientale": {
+        "name": "Baklawa orientale",
+        "description": "Recette orientale classique au goût authentique."
+      },
+      "baklawaCarree": {
+        "name": "Baklawa carrée",
+        "description": "Baklawa découpée en carrés, légère et douce."
+      },
+      "baklawaFineHoney": {
+        "name": "Baklawa fine au miel",
+        "description": "Baklawa fine et légère, imbibée de miel naturel."
+      },
+      "baklawaPremium": {
+        "name": "Baklawa premium",
+        "description": "Baklawa premium aux pistaches et noix sélectionnées."
+      }
+    },
+   "getApp": {
+    "label": "Notre application",
+    "title": "Une façon simple de commander votre nourriture",
+    "description": "Découvrez la nourriture où que vous soyez et faites-vous livrer rapidement.",
+    "button": "Obtenir l'application"
+  },
+    "timing": {
+    "title": "Nos horaires",
+    "today": "Aujourd'hui",
+    "days": {
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "special": "Spécial week-end"
+  },
+  "reviews": {
+    "title": "Avis",
+    "subtitle": "Les avis réels de nos clients satisfaits",
+    "clients": [
+      {
+        "name": "Fatema",
+        "rating": 5,
+        "comment": "Service excellent ! Je recommande vivement."
+      },
+      {
+        "name": "Amine",
+        "rating": 4,
+        "comment": "Super goût, je commanderai encore."
+      },
+      {
+        "name": "Ghali",
+        "rating": 3,
+        "comment": "Belle présentation et bonne qualité."
+      }
+    ]
+  },
+   "footer": {
+    "brand": "La Cuisine de BaklaWa",
+    "description": "Votre application BaklaWa's Kitchen pour une livraison rapide et délicieuse. Savourez la joie directement à votre porte.",
+    "company": "Entreprise",
+    "about": "À Propos",
+    "location": "Localisation",
+    "hours": "Horaires",
+    "support": "Support",
+    "security": "Centre de sécurité",
+    "faq": "FAQ",
+    "contactSupport": "Contacter le support",
+    "contact": "Contact",
+    "email": "Email : baklawa2030@gmail.com",
+    "phone": "Téléphone : +212 6 46 23 78 99",
+    "address": "Localisation : Agadir, Maroc",
+    "copyright": "© Développé par Ocean Connecting | Tous droits réservés"
+  },
+    "safetyCenter": {
+    "title": "Centre de Sécurité",
+    "subtitle": "Votre sécurité et votre confiance sont nos priorités",
+    "cards": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Sécurité Alimentaire",
+        "desc": "Tous les repas sont préparés selon des normes strictes d'hygiène et de qualité.",
+        "response": "Nous suivons des protocoles sanitaires stricts pour garantir votre sécurité à chaque repas."
+      },
+      {
+        "icon": "Truck",
+        "title": "Livraison Sécurisée",
+        "desc": "Nos partenaires de livraison garantissent des livraisons sûres et sans contact.",
+        "response": "Votre commande est livrée en toute sécurité, avec suivi en temps réel et protocole sans contact."
+      },
+      {
+        "icon": "Lock",
+        "title": "Protection des Données",
+        "desc": "Vos informations personnelles et paiements sont entièrement protégés.",
+        "response": "Nous utilisons un cryptage avancé pour sécuriser vos données et paiements en ligne."
+      }
+    ],
+    "extraSection": {
+      "title": "Besoin d'aide ou signaler un problème de sécurité ?",
+      "desc": "Contactez notre équipe de support à tout moment pour assistance.",
+      "buttonText": "Contacter le Support"
+    }
+  },
+   "about": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "Notre Baklawa est adoré par les amateurs de desserts du monde entier, préparé avec les meilleurs ingrédients et confectionné à la perfection, offrant un goût tout simplement inoubliable.",
+    "features": [
+      {
+        "title": "Commande Facile",
+        "description": "Commandez vos articles préférés rapidement et facilement grâce à notre interface conviviale."
+      },
+      {
+        "title": "Livraison Rapide",
+        "description": "Recevez vos commandes en un temps record, directement à votre porte."
+      },
+      {
+        "title": "Meilleure Qualité",
+        "description": "Nous garantissons une qualité irréprochable pour tous nos produits afin de vous satisfaire pleinement."
+      }
+    ]
+  },
+   "faqTitle": "Questions Fréquemment Posées",
+  "faq": [
+    {
+      "q": "Comment puis-je commander de la nourriture ?",
+      "a": "Vous pouvez commander facilement en sélectionnant les articles et en les ajoutant à votre panier."
+    },
+    {
+      "q": "Quels moyens de paiement sont disponibles ?",
+      "a": "Nous acceptons le paiement à la livraison et le paiement en ligne."
+    },
+    {
+      "q": "Puis-je annuler ma commande ?",
+      "a": "Oui, vous pouvez annuler votre commande avant qu'elle ne soit préparée."
+    }
+  ]
 }
+

@@ -1,8 +1,12 @@
 import React from "react";
 import img from "../assets/img/order.png";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 
 const GetApp = () => {
+    const { t } = useTranslation();
+
     return (
         <motion.section
             initial={{ opacity: 0, x: -200 }}
@@ -20,13 +24,13 @@ const GetApp = () => {
                     {/* Texte à gauche */}
                     <div>
                         <h4 className="text-orange-500 font-semibold uppercase mb-2">
-                            Notre Application
+                            {t("getApp.label")}
                         </h4>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Une façon simple de commander votre nourriture
+                            {t("getApp.title")}
                         </h2>
                         <p className="text-gray-700 dark:text-gray-300 mb-6">
-                            Découvrez la nourriture où que vous soyez et faites-vous livrer rapidement.
+                           {t("getApp.description")}
                         </p>
                         <button className="bg-orange-500 text-white font-medium px-6 py-3 rounded-full shadow hover:bg-orange-600 transition">
                             <a 
@@ -34,7 +38,7 @@ const GetApp = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer"
                             >
-                                Obtenir l'application
+                                {t("getApp.button")}
                             </a>
                         </button>
                     </div>

@@ -9,13 +9,17 @@ import Totop from "./tactics/Totop";
 import SafetyCen from "./pages/SafetyCen";
 import Faqs from "./pages/Faqs";
 import Login from "./auth/Login";
-import Local from "./pages/Local";
+import Timing from "./pages/Timing";
+import GetApp from "./pages/Process";
+
+
+//import Local from "./pages/Local";
 //import HelpCen from "./pages/HelpCen";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
-  const location = useLocation();
+  //const location = useLocation();
 
   return (
     <div >
@@ -25,12 +29,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/Timing" element={<Timing />} />
+        <Route path="/service" element={<GetApp />} />
 
         <Route path="/Food/:id" element={<FoodDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/SafetyCen" element={<SafetyCen />} />
         <Route path="/Faqs" element={<Faqs />} />
-        <Route path="/local" element={<Local />} />
         <Route
           path="/login"
           element={

@@ -1,5 +1,6 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+{/*
+  import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const LocalMap = () => {
   const position = [30.4278, -9.5981]; // Agadir example
@@ -20,3 +21,6 @@ const LocalMap = () => {
 };
 
 export default LocalMap;
+  */}
+
+

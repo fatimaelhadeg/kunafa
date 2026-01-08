@@ -1,18 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaStar, FaRegStar } from "react-icons/fa"; // Étoiles pleines et vides
+import { FaStar, FaRegStar } from "react-icons/fa"; 
 import cus1 from "../assets/img/girl.jpg";
 import cus2 from "../assets/img/boy1.jpg";
 import cus3 from "../assets/img/boy2.jpg";
-
-// Avis clients
-const reviews = [
-  { name: "Fatema", rating: 5, comment: "Service excellent ! Je recommande vivement.", image: cus1 },
-  { name: "Amine", rating: 4, comment: "Super goût, je commanderai encore.", image: cus2 },
-  { name: "Ghali", rating: 3, comment: "Belle présentation et bonne qualité.", image: cus3 },
-];
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
+  const { t } = useTranslation();
+
+  // array الصور يمكن تبقى ثابتة
+  const images = [cus1, cus2, cus3];
+
+  // reviews من JSON
+  const reviews = t("reviews.clients", { returnObjects: true });
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -20,14 +22,14 @@ const Reviews = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       className="container mx-auto py-10 lg:px-32 w-full overflow-hidden"
-      id="Avis"
+      id="reviews"
     >
       {/* Titre */}
       <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
-        Avis <span className="underline underline-offset-4 decoration-1 font-light">Clients</span>
+        {t("reviews.title")}
       </h1>
       <p className="text-center text-gray-500 mb-12 max-w-80 mx-auto">
-        Les avis réels de nos clients satisfaits
+        {t("reviews.subtitle")}
       </p>
 
       {/* Cartes des avis */}
@@ -45,17 +47,19 @@ const Reviews = () => {
                        hover:scale-105 transition-all duration-300"
           >
             {/* Image du client */}
-            {review.image && (
+            {images[index] && (
               <img
-                src={review.image}
+                src={images[index]}
                 alt={review.name}
                 className="w-40 h-40 rounded-full mx-auto mb-4"
               />
             )}
+
             {/* Nom du client */}
             <h2 className="text-xl text-[#000000] dark:text-[#c46711] font-medium mb-1">
               {review.name}
             </h2>
+
             {/* Étoiles */}
             <div className="flex justify-center gap-1 text-yellow-400 mb-4">
               {Array.from({ length: 5 }).map((_, i) =>
@@ -66,6 +70,7 @@ const Reviews = () => {
                 )
               )}
             </div>
+
             {/* Commentaire */}
             <p className="text-[#000000] dark:text-[#FFE4C4]">{review.comment}</p>
           </motion.div>

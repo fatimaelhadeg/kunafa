@@ -1,13 +1,181 @@
 {
-  "appName": "Baklava Shop",
-  "welcome": "Welcome to our store!",
-  "orderNow": "Order",
-  "cart": "Cart",
-  "checkout": "Checkout",
-  "thankYou": "Thank you for your order!",
-  "contact": "Contact Us",
-  "language": "Language",
-  "home": "Home",
-  "about": "About",
-  "faq": "FAQ"
+  "navbar": {
+    "home": "Home",
+    "menu": "Menu",
+    "reviews": "Reviews",
+    "hours": "Opening Hours",
+    "app": "Application",
+    "search": "Search",
+    "brand": "BaklaWa's Kitchen"
+  },
+   "hero": {
+    "title": "Delicious Baklawa",
+    "description": "Golden, crispy layers of pastry, nuts, and syrup come together to create an irresistible dessert loved by everyone.",
+    "cta": "Order Now"
+  },
+   "foods": {
+      "title": "Our Delicious Baklawa",
+      "price": "MAD",
+      "addToCart": "Add to Cart",
+      "searchPlaceholder": "Search for a type of baklawa"
+    },
+    "food": {
+      "baklawaClassic": {
+        "name": "Classic Baklawa",
+        "description": "Traditional baklawa stuffed with nuts and local honey."
+      },
+      "baklawaPistache": {
+        "name": "Pistachio Baklawa",
+        "description": "Thin sheets, fresh pistachios, rich and sweet taste."
+      },
+      "baklawaRolls": {
+        "name": "Baklawa Rolls",
+        "description": "Baklawa in roll shape, soaked in honey."
+      },
+      "baklawaMix": {
+        "name": "Baklawa Mix",
+        "description": "Assortment of baklawa with nuts and pistachios."
+      },
+      "baklawaRoyale": {
+        "name": "Royal Baklawa",
+        "description": "Luxury baklawa with local honey and selected nuts."
+      },
+      "baklawaOrientale": {
+        "name": "Oriental Baklawa",
+        "description": "Classic oriental recipe with authentic taste."
+      },
+      "baklawaCarree": {
+        "name": "Square Baklawa",
+        "description": "Baklawa cut into squares, light and soft."
+      },
+      "baklawaFineHoney": {
+        "name": "Fine Honey Baklawa",
+        "description": "Thin and light baklawa soaked in natural honey."
+      },
+      "baklawaPremium": {
+        "name": "Premium Baklawa",
+        "description": "Premium baklawa with pistachios and selected nuts."
+      }
+    },
+   "getApp": {
+    "label": "Our Application",
+    "title": "An easy way to order your food",
+    "description": "Discover food wherever you are and get it delivered fast.",
+    "button": "Get the app"
+  },
+   "timing": {
+    "title": "Opening hours",
+    "today": "Today",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "special": "Weekend special"
+  },
+   "reviews": {
+    "title": "Reviews",
+    "subtitle": "Real feedback from our satisfied customers",
+    "clients": [
+      {
+        "name": "Fatema",
+        "rating": 5,
+        "comment": "Excellent service! Highly recommended."
+      },
+      {
+        "name": "Amine",
+        "rating": 4,
+        "comment": "Great taste, I will order again."
+      },
+      {
+        "name": "Ghali",
+        "rating": 3,
+        "comment": "Beautiful presentation and good quality."
+      }
+    ]
+  },
+   "footer": {
+    "brand": "BaklaWa's Kitchen",
+    "description": "Your BaklaWa's Kitchen app for fast and delicious delivery. Enjoy the joy right at your doorstep.",
+    "company": "Company",
+    "about": "About Us",
+    "location": "Location",
+    "hours": "Hours",
+    "support": "Support",
+    "security": "Security Center",
+    "faq": "FAQ",
+    "contactSupport": "Contact Support",
+    "contact": "Contact",
+    "email": "Email: baklawa2030@gmail.com",
+    "phone": "Phone: +212 6 46 23 78 99",
+    "address": "Location: Agadir, Morocco",
+    "copyright": "© Developed by Ocean Connecting | All rights reserved"
+  },
+   "safetyCenter": {
+    "title": "Safety Center",
+    "subtitle": "Your safety and trust are our priorities",
+    "cards": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Food Safety",
+        "desc": "All meals are prepared according to strict hygiene and quality standards.",
+        "response": "We follow strict health protocols to ensure your safety at every meal."
+      },
+      {
+        "icon": "Truck",
+        "title": "Secure Delivery",
+        "desc": "Our delivery partners ensure safe, contactless deliveries.",
+        "response": "Your order is delivered safely, with real-time tracking and contactless protocol."
+      },
+      {
+        "icon": "Lock",
+        "title": "Data Protection",
+        "desc": "Your personal information and payments are fully protected.",
+        "response": "We use advanced encryption to secure your data and online payments."
+      }
+    ],
+    "extraSection": {
+      "title": "Need help or report a security issue?",
+      "desc": "Contact our support team anytime for assistance.",
+      "buttonText": "Contact Support"
+    }
+  },
+   "about": {
+    "title": "Why Choose Us",
+    "subtitle": "Our Baklawa is loved by dessert enthusiasts worldwide, made with the finest ingredients and crafted to perfection, delivering an unforgettable taste.",
+    "features": [
+      {
+        "title": "Easy Ordering",
+        "description": "Order your favorite items quickly and easily through our user-friendly interface."
+      },
+      {
+        "title": "Fast Delivery",
+        "description": "Receive your orders in record time, straight to your door."
+      },
+      {
+        "title": "Top Quality",
+        "description": "We guarantee impeccable quality for all our products to fully satisfy you."
+      }
+    ]
+  },
+    "faqTitle": "Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "How can I order food?",
+      "a": "You can easily order by selecting items and adding them to your cart."
+    },
+    {
+      "q": "What payment methods are available?",
+      "a": "We accept cash on delivery and online payment."
+    },
+    {
+      "q": "Can I cancel my order?",
+      "a": "Yes, you can cancel your order before it is prepared."
+    }
+  ]
+
 }
