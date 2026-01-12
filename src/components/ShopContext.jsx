@@ -10,32 +10,28 @@ const ShopContextProvider = ({ children }) => {
   const [Quantity, setQuantity] = useState(0);
   const [Total, setTotal] = useState(0);
 
-  // Total price
+  // Calcul du total prix
   useEffect(() => {
     const total = Cart.reduce((acc, item) => {
-      const price = parseFloat(item.price);
-      if (isNaN(price)) return acc;
+      const price = parseFloat(item.price) || 0;
       return acc + price * item.amount;
     }, 0);
     setTotal(total);
   }, [Cart]);
 
-  // Total quantity
+  // Calcul de la quantité totale
   useEffect(() => {
-    const amount = Cart.reduce((acc, item) => {
-      return acc + item.amount;
-    }, 0);
+    const amount = Cart.reduce((acc, item) => acc + item.amount, 0);
     setQuantity(amount);
   }, [Cart]);
 
+  // Ajouter un produit au panier
   const addCart = (Food, id) => {
     const cartItem = Cart.find((item) => item.id === id);
 
     if (cartItem) {
       const newCart = Cart.map((item) =>
-        item.id === id
-          ? { ...item, amount: item.amount + 1 }
-          : item
+        item.id === id ? { ...item, amount: item.amount + 1 } : item
       );
       setCart(newCart);
     } else {
@@ -46,17 +42,21 @@ const ShopContextProvider = ({ children }) => {
     toast.success("Food Added To Cart");
   };
 
+  // Supprimer tout le panier
   const clearCart = () => {
-    setCart([]);
-    toast.success("Cart Empty");
+  setCart([]);
+  setQuantity(0);
+  setTotal(0);    toast.success("Cart Emptied");
   };
 
+  // Supprimer un article spécifique
   const removeFromCart = (id) => {
     const newCart = Cart.filter((item) => item.id !== id);
     setCart(newCart);
     toast.success("Food Removed Successfully");
   };
 
+  // Augmenter quantité
   const increasequantity = (id) => {
     const cartItem = Cart.find((item) => item.id === id);
     if (cartItem) {
@@ -64,15 +64,13 @@ const ShopContextProvider = ({ children }) => {
     }
   };
 
+  // Diminuer quantité
   const decreasequantity = (id) => {
     const cartItem = Cart.find((item) => item.id === id);
-
     if (cartItem) {
       if (cartItem.amount > 1) {
         const newCart = Cart.map((item) =>
-          item.id === id
-            ? { ...item, amount: item.amount - 1 }
-            : item
+          item.id === id ? { ...item, amount: item.amount - 1 } : item
         );
         setCart(newCart);
       } else {

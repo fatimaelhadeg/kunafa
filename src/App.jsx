@@ -9,7 +9,7 @@ import Totop from "./tactics/Totop";
 import SafetyCen from "./pages/SafetyCen";
 import Faqs from "./pages/Faqs";
 import Login from "./auth/Login";
-import Timing from "./pages/Timing";
+//import Timing from "./pages/Timing";
 import GetApp from "./pages/Process";
 
 
@@ -29,9 +29,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/Timing" element={<Timing />} />
         <Route path="/service" element={<GetApp />} />
-
         <Route path="/Food/:id" element={<FoodDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/SafetyCen" element={<SafetyCen />} />

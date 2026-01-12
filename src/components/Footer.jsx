@@ -57,16 +57,18 @@ const Footer = () => {
               </Link>
             </li>
               */}
-            
-            <li>
+            {/*
+               <li>
               <Link
-              
                 to="/Timing"
                 className="flex items-center gap-2 hover:text-orange-400 transition transform hover:translate-x-1"
               >
                 {t("footer.hours")}
               </Link>
             </li>
+            */}
+
+         
           </ul>
         </div>
 

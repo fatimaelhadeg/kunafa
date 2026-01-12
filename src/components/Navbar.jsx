@@ -75,17 +75,22 @@ const Navbar = () => {
       {/* Menu Desktop */}
       <nav className="hidden md:flex items-center space-x-6 font-medium">
         <NavbarLink id="hero" label={t("navbar.home")} />
-        <NavbarLink id="foodlist" label={t("navbar.menu")} />
-        <NavbarLink id="reviews" label={t("navbar.reviews")} />
+        <NavbarLink id="foodslist" label={t("navbar.menu")} />
+        <NavbarLink id="special" label={t("navbar.specialOffer")} />
+        {/*
+                <NavbarLink id="reviews" label={t("navbar.reviews")} />
+
+        */}
         <NavbarLink id="Service" label={t("navbar.app")} />
       </nav>
 
       {/* Icons Right */}
       <div className="flex items-center space-x-4">
         {/* Search icon */}
-        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition cursor-pointer">
-          🔍
-        </div>
+       {/*
+         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition cursor-pointer">🔍</div>
+
+       */}
 
         {/* Cart */}
         <Link
@@ -101,7 +106,10 @@ const Navbar = () => {
         </Link>
 
         {/* Theme */}
-        <Theme />
+        {/*
+                <Theme />
+
+        */}
         {/* Language Switch */}
         <LangueSwitch />
 
@@ -128,17 +136,26 @@ const Navbar = () => {
             <NavbarLink id="hero" label={t("navbar.home")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
-            <NavbarLink id="foodlist" label={t("navbar.menu")} closeMobile={() => setShowMobile(false)} />
+            <NavbarLink id="foodslist" label={t("navbar.menu")} closeMobile={() => setShowMobile(false)} />
           </li>
           <li>
+            <NavbarLink id="special" label={t("navbar.specialOffer")} closeMobile={() => setShowMobile(false)} />
+          </li>
+          {/*
+         <li>
             <NavbarLink id="reviews" label={t("navbar.reviews")} closeMobile={() => setShowMobile(false)} />
           </li>
+        */}
+         
           <li>
             <NavbarLink id="Service" label={t("navbar.app")} closeMobile={() => setShowMobile(false)} />
           </li>
-          <li>
+          {/*
+         <li>
             <Theme />
           </li>
+        */}
+         
           <li>
             <LangueSwitch />
           </li>

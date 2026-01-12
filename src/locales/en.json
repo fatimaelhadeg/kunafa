@@ -4,13 +4,14 @@
     "menu": "Menu",
     "reviews": "Reviews",
     "hours": "Opening Hours",
-    "app": "Application",
+    "app": "Service",
+    "specialOffer": "Special Offer",
     "search": "Search",
     "brand": "BaklaWa's Kitchen"
   },
    "hero": {
     "title": "Delicious Baklawa",
-    "description": "Golden, crispy layers of pastry, nuts, and syrup come together to create an irresistible dessert loved by everyone.",
+    "description": "Golden, crispy layers of pastry, nuts, and syrup come toher to create an irresistible dessert loved by everyone.",
     "cta": "Order Now"
   },
    "foods": {
@@ -57,11 +58,11 @@
         "description": "Premium baklawa with pistachios and selected nuts."
       }
     },
-   "getApp": {
+   "App": {
     "label": "Our Application",
     "title": "An easy way to order your food",
-    "description": "Discover food wherever you are and get it delivered fast.",
-    "button": "Get the app"
+    "description": "Discover food wherever you are and  it delivered fast.",
+    "button": " the app"
   },
    "timing": {
     "title": "Opening hours",
@@ -77,26 +78,32 @@
     },
     "special": "Weekend special"
   },
-   "reviews": {
-    "title": "Reviews",
-    "subtitle": "Real feedback from our satisfied customers",
+    "reviews": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real opinions from our happy customers",
     "clients": [
       {
-        "name": "Fatema",
+        "name": "Sara L.",
         "rating": 5,
-        "comment": "Excellent service! Highly recommended."
+        "comment": "The baklava was incredibly fresh and delicious. Highly recommended!"
       },
       {
-        "name": "Amine",
+        "name": "Yassine M.",
         "rating": 4,
-        "comment": "Great taste, I will order again."
+        "comment": "Very tasty and well packed. Delivery was fast."
       },
       {
-        "name": "Ghali",
-        "rating": 3,
-        "comment": "Beautiful presentation and good quality."
+        "name": "Omar K.",
+        "rating": 5,
+        "comment": "Best baklava I’ve ever had. Will definitely order again."
+      },
+      {
+        "name": "Khadija B.",
+        "rating": 5,
+        "comment": "Amazing quality and perfect sweetness. My family loved it!"
       }
     ]
+  
   },
    "footer": {
     "brand": "BaklaWa's Kitchen",
@@ -146,7 +153,7 @@
   },
    "about": {
     "title": "Why Choose Us",
-    "subtitle": "Our Baklawa is loved by dessert enthusiasts worldwide, made with the finest ingredients and crafted to perfection, delivering an unforgettable taste.",
+    "subtitle": "Our Baklawa is loved by dessert enthusiasts worldwide, made with the finest ingredients and crafted to perfection, delivering an unfortable taste.",
     "features": [
       {
         "title": "Easy Ordering",
@@ -176,6 +183,60 @@
       "q": "Can I cancel my order?",
       "a": "Yes, you can cancel your order before it is prepared."
     }
-  ]
+  ],  "getApp": {
+    "tagline": "Delivery",
+    "title": "Door-to-Door BaklaWa Delivery",
+    "description": "Fast, safe, and reliable delivery straight to your door.",
+    "chooseMenu": "Choose Your Menu",
+    "moreInfo": "More Information"
+  },
+  "specialOffersTitle": "Our Special Offers",
+  "specialOffers": [
+    {
+        "title": "Classic Baklava Box",
+      "description": "A box of 12 delicious traditional baklavas filled with nuts and local honey.",
+      "pieces": "100 pieces",
+      "bonus": 0,
+      "price": 550,
+      "buttonText": "Order Now"
+    },
+    {
+      "title": "Pistachio Baklava Box",
+      "description": "A box of 12 crunchy baklavas with rich pistachio filling and honey.",
+      "pieces": "40 pieces",
+      "bonus": 0,
+      "price": 230,
+      "buttonText": "Order Now"
+    },
+    {
+      "title": "Mixed Baklava Box",
+      "description": "A box of 12 assorted baklavas with nuts, pistachio, and honey.",
+      "pieces": "70 pieces",
+      "bonus": 0,
+      "price": 350,
+      "buttonText": "Order Now"
+    }
+  ],
+  "cart": {
+    "title": "Shop Cart",
+    "items": "Items",
+    "food": "Food",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "remove": "Remove",
+    "empty": "Your cart is empty",
+    "summary": "Cart Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "totalCost": "Total Cost",
+    "customerDetails": "Your Details",
+    "fullName": "Full Name",
+    "city": "City",
+    "phone": "Phone",
+    "orderNow": "ORDER NOW",
+    "fillDetails": "Please fill in all your details!"
+  }
 
 }

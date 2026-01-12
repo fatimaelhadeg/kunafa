@@ -4,7 +4,8 @@
     "menu": "Menu",
     "reviews": "Avis",
     "hours": "Horaires",
-    "app": "Application",
+    "specialOffer": "Offre Spéciale",
+    "app": "Service",
     "search": "Rechercher",
     "brand": "BaklaWa's Kitchen"
   },
@@ -58,11 +59,12 @@
         "description": "Baklawa premium aux pistaches et noix sélectionnées."
       }
     },
-   "getApp": {
-    "label": "Notre application",
-    "title": "Une façon simple de commander votre nourriture",
-    "description": "Découvrez la nourriture où que vous soyez et faites-vous livrer rapidement.",
-    "button": "Obtenir l'application"
+     "getApp": {
+    "tagline": "Livraison",
+    "title": "Livraison de BaklaWa à domicile",
+    "description": "Rapide, sûre et fiable, directement chez vous.",
+    "chooseMenu": "Choisir votre menu",
+    "moreInfo": "Plus d'informations"
   },
     "timing": {
     "title": "Nos horaires",
@@ -79,26 +81,60 @@
     "special": "Spécial week-end"
   },
   "reviews": {
-    "title": "Avis",
-    "subtitle": "Les avis réels de nos clients satisfaits",
+    "title": "Ce que disent nos clients",
+    "subtitle": "Des avis authentiques de nos clients satisfaits",
     "clients": [
       {
-        "name": "Fatema",
+        "name": "Sara L.",
         "rating": 5,
-        "comment": "Service excellent ! Je recommande vivement."
+        "comment": "La baklava était incroyablement fraîche et délicieuse. Je recommande vivement !"
       },
       {
-        "name": "Amine",
+        "name": "Yassine M.",
         "rating": 4,
-        "comment": "Super goût, je commanderai encore."
+        "comment": "Très savoureuse et bien emballée. Livraison rapide."
       },
       {
-        "name": "Ghali",
-        "rating": 3,
-        "comment": "Belle présentation et bonne qualité."
+        "name": "Omar K.",
+        "rating": 5,
+        "comment": "La meilleure baklava que j’ai jamais goûtée. Je recommanderai sans hésiter."
+      },
+      {
+        "name": "Khadija B.",
+        "rating": 5,
+        "comment": "Qualité exceptionnelle et douceur parfaite. Toute ma famille a adoré !"
       }
     ]
+  
   },
+       "specialOffersTitle": "Nos Offres Spéciales",
+  "specialOffers": [
+    {
+      "title": "Boîte Baklava Classique",
+      "description": "Une boîte de 12 délicieuses baklavas traditionnelles garnies de noix et de miel local.",
+      "pieces": "100 pièces",
+      "bonus": 0,
+      "price": 550,
+      "buttonText": "Commander Maintenant"
+    },
+    {
+      "title": "Boîte Baklava Pistache",
+      "description": "Une boîte de 12 baklavas croustillantes avec une riche garniture aux pistaches et miel.",
+      "pieces": "40 pièces",
+      "bonus": 0,
+      "price": 230,
+      "buttonText": "Commander Maintenant"
+    },
+    {
+     "title": "Boîte Baklava Mixte",
+      "description": "Une boîte de 12 baklavas assorties avec noix, pistache et miel.",
+      "pieces": "12 pièces",
+      "pieces": "70 pièces",
+      "bonus": 0,
+      "price": 350,
+      "buttonText": "Commander Maintenant"
+    }
+  ],
    "footer": {
     "brand": "La Cuisine de BaklaWa",
     "description": "Votre application BaklaWa's Kitchen pour une livraison rapide et délicieuse. Savourez la joie directement à votre porte.",
@@ -177,6 +213,28 @@
       "q": "Puis-je annuler ma commande ?",
       "a": "Oui, vous pouvez annuler votre commande avant qu'elle ne soit préparée."
     }
-  ]
+  ],
+   "cart": {
+    "title": "Panier",
+    "items": "Articles",
+    "food": "Produit",
+    "quantity": "Quantité",
+    "price": "Prix",
+    "total": "Total",
+    "remove": "Supprimer",
+    "empty": "Votre panier est vide",
+    "summary": "Récapitulatif du panier",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "free": "Gratuite",
+    "totalCost": "Coût total",
+    "customerDetails": "Vos informations",
+    "fullName": "Nom complet",
+    "city": "Ville",
+    "phone": "Téléphone",
+    "orderNow": "COMMANDER",
+    "fillDetails": "Veuillez remplir tous vos détails !"
+  }
+
 }
 

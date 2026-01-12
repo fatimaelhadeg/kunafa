@@ -8,7 +8,7 @@ const FoodsList = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full mx-auto px-6 text-center mt-20" id="foodlist">
+    <div className="w-full mx-auto px-6 text-center mt-20" id="foodslist">
       <h2 className="text-3xl font-semibold mb-8 text-gray-800">
         {t("foods.title")}
       </h2>

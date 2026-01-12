@@ -24,7 +24,7 @@ const Hero = () => {
   // Scroll vers section FoodList
   const scrollToFoodList = () => {
     if (location.pathname === "/") {
-      document.getElementById("foodlist")?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("foodslist")?.scrollIntoView({ behavior: "smooth" });
     } else {
       navigate("/");
       setTimeout(() => {
