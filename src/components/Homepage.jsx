@@ -4,7 +4,7 @@ import FoodsList from './FoodsList';
 import Process from '../pages/Process';
 import SpecialOffer from './SpecialOffer';
 //import Timing from "../pages/Timing";
-import Reviews from '../pages/Reviews';
+//import Reviews from '../pages/Reviews';
 
 const Homepage = () => {
   return (
@@ -13,7 +13,6 @@ const Homepage = () => {
        <FoodsList />
        <SpecialOffer />
        <Process />
-       <Reviews />
     </div>
   )
 }

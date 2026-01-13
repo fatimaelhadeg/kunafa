@@ -8,7 +8,7 @@ import Cart from './components/Cart';
 import Totop from "./tactics/Totop";
 import SafetyCen from "./pages/SafetyCen";
 import Faqs from "./pages/Faqs";
-import Login from "./auth/Login";
+//import Login from "./auth/Login";
 //import Timing from "./pages/Timing";
 import GetApp from "./pages/Process";
 
@@ -34,6 +34,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/SafetyCen" element={<SafetyCen />} />
         <Route path="/Faqs" element={<Faqs />} />
+        {/*
         <Route
           path="/login"
           element={
@@ -47,6 +48,8 @@ const App = () => {
             </div>
           }
         />
+        */}
+        
       </Routes>
       <Footer />
     </div>
