@@ -16,13 +16,11 @@ const NavbarLink = ({ id, label, closeMobile }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (closeMobile) closeMobile(); // close mobile menu if open
+    if (closeMobile) closeMobile(); 
 
     if (location.pathname === "/") {
-      // scroll f same page
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // navigate home + scroll
       navigate("/");
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -47,6 +45,7 @@ const Navbar = () => {
   const { Quantity } = useContext(ShopContext);
   const { t } = useTranslation();
 
+  
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
@@ -95,7 +94,7 @@ const Navbar = () => {
         {/* Cart */}
         <Link
           to="/cart"
-          className="relative w-10 h-10 flex items-center justify-center rounded-full bg-orange-100 hover:bg-orange-200 transition"
+          className="relative w-10 h-10 flex items-center justify-center rounded-full  transition"
         >
           <BiCart className="text-xl text-orange-600" />
           {Quantity > 0 && (

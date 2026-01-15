@@ -18,7 +18,7 @@ const LangueSwitch = () => {
 
   return (
     <div className="relative">
-      <button onClick={() => setOpen(!open)} className="p-2 border rounded">
+      <button onClick={() => setOpen(!open)} className="p-2 rounded">
         🌐
       </button>
 
