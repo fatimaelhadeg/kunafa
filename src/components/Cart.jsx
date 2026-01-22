@@ -64,7 +64,9 @@ const Cart = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-6 mt-10 flex flex-col lg:flex-row gap-6">
+    // هنا زدنا padding من الفوق باش الصفحة تهبط تحت الـ Navbar فـ mobile
+    <div className="max-w-7xl mx-auto px-3 sm:px-6 pt-24 sm:pt-28 lg:pt-32 flex flex-col lg:flex-row gap-6">
+      
       {/* LEFT */}
       <div className="lg:w-2/3 w-full bg-white p-4 sm:p-6 rounded-lg shadow-md">
         <div className="flex justify-between items-center border-b pb-4">
@@ -80,7 +82,7 @@ const Cart = () => {
           />
         </div>
 
-        {/* Header */}
+        {/* Header (يظهر غير فـ desktop) */}
         <div className="hidden lg:grid grid-cols-4 text-gray-700 font-semibold mt-6 pb-2 border-b">
           <span>{t("cart.food")}</span>
           <span>{t("cart.quantity")}</span>
@@ -129,9 +131,7 @@ const Cart = () => {
                     </h3>
                   )}
                   <button
-                    onClick={() =>
-                      removeFromCart(item.id || item.title)
-                    }
+                    onClick={() => removeFromCart(item.id || item.title)}
                     className="text-red-500 text-sm flex items-center gap-1 mt-2"
                   >
                     <FiTrash2 /> {t("cart.remove")}
